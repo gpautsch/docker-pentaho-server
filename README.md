@@ -11,7 +11,7 @@ Cabe aclarar que Pentaho Server es uno de los componentes de la Suite Pentaho (a
 
 **Crear y ejecutar contenedor**
 ```
-docker run --name mipentahoserver -d -p 8080:8080 magm3333/pentahoserver
+docker run --name mipentahoserver -d -p 8080:8080 bd/pentahoserver
 ```
 
 **Crear la imagen**
