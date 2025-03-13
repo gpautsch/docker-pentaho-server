@@ -39,13 +39,13 @@ En base a la imagen de dockerhub
 Ultima versión:
 
 ```
-docker run --name pentahoserver91 -d -p 8080:8080 magm3333/pentahoserver
+docker run --name pentahoserver91 -d -p 8080:8080 bd/pentahoserver
 ```
 
 Versión específica
 
 ```
-docker run --name pentahoserver91 -d -p 8080:8080 magm3333/pentahoserver:9.1ce
+docker run --name pentahoserver91 -d -p 8080:8080 bd/pentahoserver:9.1ce
 ```
 
 
