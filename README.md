@@ -1,17 +1,9 @@
-# Docker Pentaho Server
+# Docker Bases de Datos - UNaM
 
-**Que es Pentaho Server?**
-Se trata de un software de inteligencia de negocios de código abierto escrito en java que permite, entre otras cosas, ejecutar componentes de inteligencia de negocios como:
-- Análisis dinámicos u OLAP (mediante Mondrian como motor y gran cantidad de herramientas gráficas como Pivot4J)
-- Reportes (mediante Pentaho Reporting)
-- Procesos de Integración de Datos (mediante Pentaho Data Integration)
-- Tableros de mando (mediante CDF/CDE/CDA)
-- etc
-Cabe aclarar que Pentaho Server es uno de los componentes de la Suite Pentaho (ahora Hitachi Ventara), algunos de los otros componetes como Pentaho reporting y Pentaho Data Integration son independientes y poseen una interface gráfica de tipo desktop, aunque Pentaho Data Integration posee una excelente interface web llamada [WebSpoon](https://github.com/HiromuHota/webspoon-docker)  
 
 **Crear y ejecutar contenedor**
 ```
-docker run --name mipentahoserver -d -p 8080:8080 bd/pentahoserver
+docker run --name pentahoserver -d -p 8080:8080 bd/pentahoserver
 ```
 
 **Crear la imagen**
