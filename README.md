@@ -24,7 +24,7 @@ Una vez clonado este repositorio deberá:
 > wget https://github.com/frekele/oracle-java/releases/download/8u201-b09/jdk-8u201-linux-x64.tar.gz -O jdk-8-linux-x64.tar.gz 
 - Descargar Pentaho Server CE, asegurate que posea el nombre *pentaho-server-ce.zip* cuando lo descargues, puedes utilizar este [enlace](https://drive.google.com/file/d/1VjvizNUY4aHvPt744u04iiP1S0wdmlxs/view?usp=sharing).
   
-- Finalmente, crear la imagen:
+- Tambien utiliaremos Saiku que es una herramienta para navegar entre los datos y representarlos gráficamente. Puedes descargarla desde [aquí](https://drive.google.com/file/d/1Z5Ek3P4E3RFfcDr1sUFXZ0cNTTkod7xA/view?usp=sharing).
 
 ## Correr los container de la raiz
 
