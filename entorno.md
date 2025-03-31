@@ -22,13 +22,13 @@ _\* recomendacion de la catedra_
 # ubicarse en el directorio donde se desea clonar el repositorio
 # cd <path> ej:
  
-cd /home/projects
+cd /opt/pentaho
 
 ## clonar el reposotorio
 ## git clone <url_copiada>
-## url ~ https://github.com/suUsuario/PYLP
+## url ~ [https://github.com/gpautsch/docker-pentaho-server.git]
 
-git clone https://github.com/gpautsch/PYLP.git
+git clone https://github.com/gpautsch/docker-pentaho-server.git
 ```
 
 4. Es necesario solicitar al equipo de catedra la adhesion al team de la cohorte correspondiente para tener acceso y poder contribuir con el repositorio.
