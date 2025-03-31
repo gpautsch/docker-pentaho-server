@@ -17,10 +17,6 @@ Mgter. J. Germán A. PAUTSCH
 ## Preparando el entorno
 
 [guia para preparar el entorno](./entorno.md)
-**Crear y ejecutar contenedor**
-```
-docker run --name pentahoserver -d -p 8080:8080 bd/pentahoserver
-```
 
 **Crear la imagen**
 Una vez clonado este repositorio deberá:
@@ -30,79 +26,15 @@ Una vez clonado este repositorio deberá:
 > wget https://razaoinfo.dl.sourceforge.net/project/pentaho/Pentaho%209.0/server/pentaho-server-ce-9.0.0.0-423.zip -O pentaho-server-ce.zip
 - Finalmente, crear la imagen:
 
-```
-docker build -t pentahoserver .
-```
+## Correr los container de la raiz
 
-**Crear un contenedor**
+en una terminal desde la raiz de este repo ejecutar:
 
-En base a tu imagen local
+```bash
+# para levantar los containers
+$ docker-compose up
 
-```
-docker run --name mipentahoserver -d -p 8080:8080 pentahoserver
-```
+# para parar los containers
+docker-compose stop
+```Finalmente podrás disfrutar de tu Pentaho server accediendo a la url: *http://localhost:8080/pentaho* 
 
-En base a la imagen de dockerhub
-
-Ultima versión:
-
-```
-docker run --name pentahoserver91 -d -p 8080:8080 bd/pentahoserver
-```
-
-Versión específica
-
-```
-docker run --name pentahoserver91 -d -p 8080:8080 bd/pentahoserver:9.1ce
-```
-
-
-Puedes ver el log de tu contenedor de la siguiente manera:
-
-```
-docker logs mipentahoserver
-```
-
-Finalmente podrás disfrutar de tu Pentaho server accediendo a la url: *http://localhost:8080/pentaho* 
-
-**Actualizar o agregar drivers JDBC**
-Los drivers JDBC extra se encuentran en la carpeta /opt/pentaho-server/tomcat/lib dentro del contenedor, una vez ue tu contener se ha creado y está corriendo, puedes ver el contenido de la carpeta de la siguiente forma:
-```
-docker exec -it mipentahoserver bash -c "ls -lsh /opt/pentaho-server/tomcat/lib"
-```
-Se puede actualizar el driver de mysql de la siguiente forma:
-```
-docker cp ~/Descargas/mysql-connector-java-5.1.48-bin.jar  mipentahoserver:/opt/pentaho-server/tomcat/lib/mysql-connector-java-5.1.17.jar
-```
-En el caso anterior se descargó la versión 5.1.48 del driver y se colocó en ~/Descargas, finalmente se sobreescribió el driver existente a fin de no tener que eliminarlo, aunque te recomiendo hacerlo. 
-Ahora debes reinicisar el contenedor para que el nuevo driver comience a funcionar:
-```
-docker restart mipentahoserver
-```
-Si deseas agregar nuevos drivers, solo debes usar el compando * docker cp*
-
-**Aclaraciones**
-
-La versión 9.1ce es la más pulida, ya se encuentran instalados los pluguins:
-
-1) Pivot4J
-2) Visualizer (en español), se puede ver un excelente tutorial introductorio aquí: (https://www.linkedin.com/pulse/visualizer-dashboards-mondrian-olap-en-pentaho-dario-bernabeu/)
-
-**Agradecimientos**
-- La instalación del JDK se realiza con una pequeña modificación del script creado por [chrishantha](https://github.com/chrishantha/install-java
-- A mi queridx amigx [Darío Bernabeu](https://troyanx.com/Hefesto/bernabeu-dario.html), compañerx de aventuras, aprendizajes y demás cosas importantes de la vida.
-- A [Ubuntu Peronista](https://ubuntuperonista.blogspot.com/) por sus constantes aportes a la causa.
-- Esta imagen está basada en *ubuntu:18.04*
-
-
-**TODO**
-- Ejemplo de cambio de Time Zone
-- Agregar versiones anteriores
-
-***
-
-**Licencia**
-
-Creado por Mariano Alberto García Mattío en 2020 (Twitter [@magm3333](https://twitter.com/magm3333))
-
-Licensed under the Apache License, Version 2.0
