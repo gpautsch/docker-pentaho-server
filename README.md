@@ -1,6 +1,22 @@
 # Docker Bases de Datos - UNaM
 
+Repositorio oficial de la práctica de la cátedra Paradigmas y Lenguajes de Programación, de la Lic. en Sistemas de Información de la Universidad Nacional de Misiones.
 
+## Equipo de cátedra
+
+| Cargo                               | Nombre                              |
+| ----------------------------------- | ----------------------------------- |
+| Responsable de Teoria               | Dra. Nora Reyes                     |
+| Responsable de Práctica             | Mgter. German Pautsch               |
+
+## Administrador del Repo
+
+Mgter. J. Germán A. PAUTSCH
+[Aboutme](https://about.me/german.pautsch)
+
+## Preparando el entorno
+
+[guia para preparar el entorno](./entorno.md)
 **Crear y ejecutar contenedor**
 ```
 docker run --name pentahoserver -d -p 8080:8080 bd/pentahoserver
