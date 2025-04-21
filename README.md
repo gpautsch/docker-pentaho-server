@@ -1,4 +1,4 @@
-# Docker Bases de Datos - UNaM
+# Docker Pentaho BBII Server 9.4
 
 Repositorio oficial de la práctica de la cátedra Paradigmas y Lenguajes de Programación, de la Lic. en Sistemas de Información de la Universidad Nacional de Misiones.
 
